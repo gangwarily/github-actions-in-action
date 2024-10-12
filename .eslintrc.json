@@ -1,0 +1,22 @@
+{
+  "extends": [
+    "airbnb-base",                     // Airbnb base style guide without React
+    "plugin:@typescript-eslint/recommended", // TypeScript recommended rules
+    "plugin:prettier/recommended"       // Enables eslint-plugin-prettier and eslint-config-prettier
+  ],
+  "parser": "@typescript-eslint/parser", // Specifies the ESLint parser for TypeScript
+  "plugins": ["@typescript-eslint", "prettier"], // Adds TypeScript and Prettier plugins
+  "env": {
+    "browser": true,                    // Browser global variables like `window` and `document`
+    "es6": true,                        // Enables ES6 syntax support
+    "node": true                        // Node.js global variables like `process`
+  },
+  "rules": {
+    "prettier/prettier": ["error"],     // Ensure Prettier errors break the build
+    "@typescript-eslint/explicit-module-boundary-types": "off", // Disable requiring return types for functions
+    "@typescript-eslint/no-unused-vars": "error", // Error for unused variables
+    "import/extensions": "off",          // Disable checking for file extensions in imports
+    "import/no-unresolved": "off",       // Disable unresolved imports check (TypeScript handles it)
+    "import/prefer-default-export": "off" // Disable this rule if you prefer named exports flexibility
+  }
+}
