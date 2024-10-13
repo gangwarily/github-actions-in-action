@@ -19,3 +19,6 @@ which is why you must download the artifact.
       * Use the `run` field when defining your `step`
   * You can use the Marketplace to find verified Actions (`checkout` for example is maintained by GitHub)
 * You can check which software is installed by default
+* If you define separate jobs, it will run in parallel (So creating a separate job that is `setup` doesn't work unless 
+you modify your workflows)
+  * You can use `needs` (You can use array notation to mean multiple)
