@@ -1,5 +1,5 @@
 name: First Action
-on: workflow_dispatch # Triggered manu
+on: workflow_dispatch # Triggered manually
 jobs:
   first-job:
     runs-on: ubuntu-latest
