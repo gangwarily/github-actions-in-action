@@ -21,4 +21,9 @@ which is why you must download the artifact.
 * You can check which software is installed by default
 * If you define separate jobs, it will run in parallel (So creating a separate job that is `setup` doesn't work unless 
 you modify your workflows)
-  * You can use `needs` (You can use array notation to mean multiple)
+  * You can use `needs` to require one for another(You can use array notation to mean multiple)
+  * If the `needs` fail, it will then not run subsequent jobs
+* You can use multiple fields with `on` to allow for multiple-triggers
+* Context
+  * Information being passed to GitHub Action runs
+    * GitHub `run "${{ toJSON(github) }}"` <= Using expression
